@@ -12,7 +12,7 @@ use mata\base\MessageEvent;
  * @property string $Key
  * @property string $Value
  */
-class KeyValue extends \mata\db\ActiveRecord {
+class KeyValue extends \matacms\db\ActiveRecord {
 
     const EVENT_KEY_NOT_FOUND = "event_key_not_found";
 
@@ -29,7 +29,7 @@ class KeyValue extends \mata\db\ActiveRecord {
     public function rules()
     {
         return [
-        [['Key', 'Value'], 'required'],
+        [['Key'], 'required'],
         [['Key'], 'string']
         ];
     }
