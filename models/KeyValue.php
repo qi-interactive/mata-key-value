@@ -37,8 +37,7 @@ class KeyValue extends \mata\db\ActiveRecord {
     /**
      * @inheritdoc
      */
-    public function attributeLabels()
-    {
+    public function attributeLabels() {
         return [
         'Key' => 'Key',
         'Value' => 'Value',
@@ -46,6 +45,15 @@ class KeyValue extends \mata\db\ActiveRecord {
     }
 
     public static function findByKey($key) {
+        $model = self::find()->where(["Key" => $key])->one();
+
+        if ($model == null)
+            Event::trigger(self::className(), self::EVENT_KEY_NOT_FOUND, new MessageEvent($key));
+
+        return $model;
+    }
+
+    public static function findValue($key) {
         $model = self::find()->where(["Key" => $key])->one();
 
         if ($model == null)
