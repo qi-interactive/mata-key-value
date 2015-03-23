@@ -30,7 +30,7 @@ class KeyValue extends \mata\db\ActiveRecord {
     {
         return [
         [['Key'], 'required'],
-        [['Key'], 'string']
+        [['Key', 'Value'], 'string']
         ];
     }
 
