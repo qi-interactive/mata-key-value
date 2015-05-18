@@ -1,16 +1,12 @@
 {
     "name": "mata/mata-key-value",
-    "description": "Generic Key-Value store",
+    "description": "Generic Key -- Value store for MATA applications.",
     "keywords": ["yii2", "mata-key-value", "store", "mata"],
     "type": "yii2-extension",
     "license": "MIT",
     "support": {
     },
-    "minimum-stability": "dev",
     "require": {
-        "codeception/codeception": "*",
-        "yiisoft/yii2-codeception": "*",
-        "yiisoft/yii2-faker": "*"
     },
     "autoload": {
         "psr-4": {
