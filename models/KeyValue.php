@@ -1,4 +1,10 @@
 <?php
+ 
+/**
+ * @link http://www.matacms.com/
+ * @copyright Copyright (c) 2015 Qi Interactive Limited
+ * @license http://www.matacms.com/license/
+ */
 
 namespace mata\keyvalue\models;
 
@@ -16,16 +22,10 @@ class KeyValue extends \mata\db\ActiveRecord {
 
     const EVENT_KEY_NOT_FOUND = "event_key_not_found";
 
-    /**
-     * @inheritdoc
-     */
     public static function tableName() {
         return 'mata_keyvalue';
     }
 
-    /**
-     * @inheritdoc
-     */
     public function rules()
     {
         return [
@@ -35,9 +35,6 @@ class KeyValue extends \mata\db\ActiveRecord {
         ];
     }
 
-    /**
-     * @inheritdoc
-     */
     public function attributeLabels() {
         return [
         'Key' => 'Key',
